@@ -1,0 +1,19 @@
+﻿@section Scripts{ 
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/js/jquery.validate.unobtrusive.js"></script>
+
+    <script src="~/js/jquery-ui.js"></script>
+    <script>
+            $("input[name='Categoria']").autocomplete({
+                source: function (request, response) {
+                $.post(
+                "@Url.Action("CategoriaAutocomplete")",
+                { termoDigitado: request.term },
+                function (data) {
+                    response(data);
+                });
+                }
+            });
+    </script>
+}

@@ -1,0 +1,25 @@
+﻿<aside>
+    <div>
+        <h3>Buscar</h3>
+        
+        <form asp-controller="Home" asp-action="Busca" method="get" class="inline-form">
+            <div class="input-group">
+                <input type="text" name="termo" class="form-control" placeholder="Buscar por..." />
+                <span class="input-group-append">
+                    <button class="btn btn-primary" type="submit">OK</button>
+                </span>
+            </div>
+        </form>
+
+    </div>
+
+    <div id="categorias">
+        <h3>Categorias</h3>
+        @*Alguns links para categorias*@
+    </div>
+
+    <div id="autores">
+        <h3>Autores</h3>
+        @*Alguns links para autores*@
+    </div>
+</aside>
